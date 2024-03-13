@@ -59,7 +59,7 @@ const Signup = () => {
               <Button
                 onClick={async () => {
                   const response = await axios.post(
-                    "https://paytm-like-app.onrender.com/api/v1/user/signup",
+                    "https://transactions-kxx7.onrender.com/api/v1/user/signup",
                     {
                       username,
                       firstName,

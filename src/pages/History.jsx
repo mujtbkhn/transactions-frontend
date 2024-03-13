@@ -9,7 +9,7 @@ const History = () => {
       try {
         const token = localStorage.getItem("tokenn");
         const response = await axios.get(
-          "https://paytm-like-app.onrender.com/api/v1/account/transactions",
+          "https://transactions-kxx7.onrender.com/api/v1/account/transactions",
           {
             headers: {
               Authorization: `Bearer ${token}`,

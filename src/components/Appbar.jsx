@@ -11,7 +11,7 @@ export const Appbar = ({ onBalanceIncrease }) => {
   const handleIncrease = async () => {
     try {
       await axios.post(
-        "https://paytm-like-app.onrender.com/api/v1/account/addBalance",
+        "https://transactions-kxx7.onrender.com/api/v1/account/addBalance",
         null,
         {
           headers: {

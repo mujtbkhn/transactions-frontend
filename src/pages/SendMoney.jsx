@@ -14,7 +14,7 @@ const SendMoney = ({ balance, onBalanceUpdate }) => {
     setIsTransferring(true);
     try {
       await axios.post(
-        "https://paytm-like-app.onrender.com/api/v1/account/transfer",
+        "https://transactions-kxx7.onrender.com/api/v1/account/transfer",
         {
           to: id,
           amount,
