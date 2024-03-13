@@ -1,2 +1,2 @@
-- [live](https://paytm-mujtaba.netlify.app/)
+- [live](https://mujtabas-transaction-app.vercel.app/)
   
