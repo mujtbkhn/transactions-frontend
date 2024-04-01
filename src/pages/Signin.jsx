@@ -15,7 +15,6 @@ const Signin = () => {
   const navigate = useNavigate();
   return (
     <>
-     {/* <AuthCheck /> */}
       <div className="flex flex-col items-center justify-center w-3/4 mx-auto mt-5 border-2 border-black md:w-1/5">
         <Heading label={"Sign in"} />
         <SubHeading

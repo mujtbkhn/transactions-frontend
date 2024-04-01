@@ -3,7 +3,6 @@ import { Appbar } from "../components/Appbar";
 import { Balance } from "../components/Balance";
 import { Users } from "../components/Users";
 import { fetchBalance } from "../utils/api";
-import AuthCheck from "../components/AuthCheck";
 
 const Dashboard = ({ }) => {
   const [loading, setLoading] = useState(true);
@@ -39,7 +38,6 @@ const Dashboard = ({ }) => {
 
   return (
     <div>
-      {/* <AuthCheck onBalanceIncrease={updateBalance}/> */}
       <Appbar onBalanceIncrease={updateBalance}/>
       <div className="m-8">
         {loading ? (

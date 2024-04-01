@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import SendMoney from "./pages/SendMoney";
 import History from "./pages/History";
 import { fetchBalance } from "./utils/api";
+import PrivateRoutes from "./components/PrivateRoutes";
 
 function App() {
   const [balance, setBalance] = useState(null);
@@ -33,7 +34,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <>
+          <Route element={<PrivateRoutes />}>
             <Route
               path="/dashboard"
               element={<Dashboard balance={balance} setBalance={setBalance} />}
@@ -45,13 +46,11 @@ function App() {
               }
             />
             <Route path="/history" element={<History />} />
-          </>
+          </Route>
 
-          <>
-            <Route path="/" element={<Signin />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/signin" element={<Signin />} />
-          </>
+          <Route path="/" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
         </Routes>
       </BrowserRouter>
     </div>

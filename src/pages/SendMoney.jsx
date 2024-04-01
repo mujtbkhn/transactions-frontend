@@ -41,7 +41,6 @@ const SendMoney = ({ balance, onBalanceUpdate }) => {
 
   return (
     <div className="flex justify-center h-screen bg-gray-100">
-      {/* <AuthCheck /> */}
       <div className="flex flex-col justify-center h-full">
         <div className="max-w-md p-4 space-y-8 bg-white border rounded-lg shadow-lg h-min text-card-foreground w-96">
           <div className="flex flex-col space-y-1.5 p-6">

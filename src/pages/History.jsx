@@ -26,7 +26,6 @@ const History = () => {
 
   return (
     <>
-    {/* <AuthCheck /> */}
       <div className="bg-white border-2 border-gray md:m-10 mx-4 mt-8 md:w-[600px] h-[580px] flex justify-start md:mx-auto flex-col rounded-xl px-8">
         <h1 className="flex justify-start mt-4 text-2xl font-semibold">
           Recent Transactions
