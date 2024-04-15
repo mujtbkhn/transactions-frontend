@@ -16,9 +16,9 @@ This web application allows users to interact with each other by sending or rece
 This application was created with a focus on learning how transactions work, primarily emphasizing backend functionality.
 
 ## Technologies Used
-- **Backend**: Node.js
+- **Backend**: Node.js Express.js
 - **Database**: MongoDB
-- **Frontend**: HTML, CSS, JavaScript
+- **Frontend**: React.js
 - **Authentication**: JSON Web Tokens (JWT)
 
 ## How to Use
