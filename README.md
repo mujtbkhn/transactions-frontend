@@ -25,14 +25,11 @@ This application was created with a focus on learning how transactions work, pri
 1. Clone the repository to your local machine.
 2. Install dependencies using `npm install`.
 3. Set up a MongoDB database and configure the connection string in the application.
-4. Run the application using `npm start`.
-5. Navigate to `http://localhost:3000` in your web browser.
+4. Run the application using `npm run dev`.
+5. Navigate to `http://localhost:5173` in your web browser.
 6. Sign up or log in to start using the application.
 
 ## Contributors
-- [Your Name] - [Your Contact Information]
-
-## License
-This project is licensed under the [MIT License](LICENSE).
+- [Abdul Rehman Mujtaba Khan] - [mujjukhn538@gmail.com]
 
   
