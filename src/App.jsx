@@ -7,6 +7,7 @@ import SendMoney from "./pages/SendMoney";
 import History from "./pages/History";
 import { fetchBalance } from "./utils/api";
 import PrivateRoutes from "./components/PrivateRoutes";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [balance, setBalance] = useState(null);
@@ -33,6 +34,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+      <Toaster position="top-center" />
         <Routes>
           <Route element={<PrivateRoutes />}>
             <Route

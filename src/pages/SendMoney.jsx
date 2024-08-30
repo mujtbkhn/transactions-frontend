@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Balance } from "../components/Balance";
+import toast from "react-hot-toast";
 
 const SendMoney = ({ balance, onBalanceUpdate }) => {
   const [searchParams] = useSearchParams();
@@ -29,10 +30,34 @@ const SendMoney = ({ balance, onBalanceUpdate }) => {
       // For demonstration purposes, just decrement the balance by the transferred amount
       onBalanceUpdate()
       setAmount(0); // Reset the input field
-      setIsTransferring(false); // Reset the transfer state
+      toast.success("Transfer completed successfully!");
     } catch (error) {
       console.error("Error initiating transfer: ", error);
-      setIsTransferring(false); // Reset the transfer state in case of error
+
+      if (error.response && error.response.data) {
+        const { code, message } = error.response.data;
+        switch (code) {
+          case 'INVALID_AMOUNT':
+            toast.error("Invalid transfer amount. Please enter a valid amount.");
+            break;
+          case 'RECEIVER_NOT_FOUND':
+            toast.error("Receiver account not found. Please check the recipient details.");
+            break;
+          case 'INSUFFICIENT_BALANCE':
+            toast.error("Insufficient balance. Please add funds to your account.");
+            break;
+          case 'INTERNAL_ERROR':
+            toast.error("An error occurred during the transfer. Please try again later.");
+            break;
+          default:
+            toast.error(message || "An unexpected error occurred. Please try again.");
+            break;
+        }
+      } else {
+        toast.error("An unexpected error occurred. Please try again.");
+      }
+    } finally {
+      setIsTransferring(false);
     }
   };
 
