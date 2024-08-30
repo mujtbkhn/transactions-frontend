@@ -1,6 +1,6 @@
 import axios from "axios";
-import {  useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { Balance } from "../components/Balance";
 
 const SendMoney = ({ balance, onBalanceUpdate }) => {
@@ -43,7 +43,10 @@ const SendMoney = ({ balance, onBalanceUpdate }) => {
     <div className="flex justify-center h-screen bg-gray-100">
       <div className="flex flex-col justify-center h-full">
         <div className="max-w-md p-4 space-y-8 bg-white border rounded-lg shadow-lg h-min text-card-foreground w-96">
-          <div className="flex flex-col space-y-1.5 p-6">
+          <div className="flex gap-5 space-y-1.5 p-6">
+            <Link to={"/dashboard"}>
+              <img className="w-10" width="48" height="48" src="https://img.icons8.com/fluency-systems-filled/48/1A1A1A/long-arrow-left.png" alt="long-arrow-left" />
+            </Link>
             <h2 className="text-3xl font-bold text-center">Send Money</h2>
           </div>
           <div>

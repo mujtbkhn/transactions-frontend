@@ -24,9 +24,9 @@ const Signin = () => {
           onChange={(e) => {
             setUsername(e.target.value);
           }}
-          label={"email"}
-          placeholder={"mujju@gmail.com"}
-          name={"email"}
+          label={"username"}
+          placeholder={"mujtaba-khan"}
+          name={"username"}
         />
         <InputBox
           onChange={(e) => {

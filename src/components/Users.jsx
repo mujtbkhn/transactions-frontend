@@ -9,30 +9,30 @@ export const Users = () => {
     const [users, setUsers] = useState([]);
     const [filter, setFilter] = useState('')
 
-    useEffect(()=>{
+    useEffect(() => {
         axios.get('https://transactions-kxx7.onrender.com/api/v1/user/bulk?filter=' + filter)
-          .then(response => {
-             setUsers(response.data.user)
-          })
+            .then(response => {
+                setUsers(response.data.user)
+            })
     }, [filter])
 
-    
+
     return <>
         <div className="mt-6 text-lg font-bold">
             Users
         </div>
         <div className="my-2">
-            <input onChange={(e)=>{
+            <input onChange={(e) => {
                 setFilter(e.target.value)
             }} type="text" placeholder="Search users..." className="w-full px-2 py-1 border rounded border-slate-200"></input>
         </div>
         <div>
-            {users.map((user, index) => <User user={user} key={index}/>)}
+            {users.map((user, index) => <User user={user} key={index} />)}
         </div>
     </>
 }
 
-function User({user}) {
+function User({ user }) {
     const navigate = useNavigate();
 
     return <div className="flex justify-between">
@@ -46,11 +46,14 @@ function User({user}) {
                 <div>
                     {user.firstName} {user.lastName}
                 </div>
+                <div className="font-semibold">
+                    @{user.username}
+                </div>
             </div>
         </div>
 
         <div className="flex flex-col justify-center h-ful">
-            <Button onClick={(e)=>{
+            <Button onClick={(e) => {
                 navigate('/send?id=' + user._id + '&name=' + user.firstName)
             }} label={"Send Money"} />
         </div>
