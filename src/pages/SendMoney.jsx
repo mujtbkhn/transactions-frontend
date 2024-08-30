@@ -16,12 +16,12 @@ const SendMoney = ({ balance, onBalanceUpdate }) => {
       await axios.post(
         "https://transactions-kxx7.onrender.com/api/v1/account/transfer",
         {
-          to: id,
           amount,
+          to: id,
         },
         {
           headers: {
-            Authorization: "Bearer " + localStorage.getItem("tokenn"),
+            Authorization: localStorage.getItem("tokenn"),
           },
         }
       );
