@@ -21,7 +21,7 @@ const SendMoney = ({ balance, onBalanceUpdate }) => {
         },
         {
           headers: {
-            Authorization: localStorage.getItem("tokenn"),
+            Authorization: "Bearer " + localStorage.getItem("tokenn"),
           },
         }
       );
